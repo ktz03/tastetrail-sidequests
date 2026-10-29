@@ -16,6 +16,8 @@ A cultural exchange for two curious people: search and confirm one cultural seed
 
 Requires Node.js 20 or later. No packages need to be installed.
 
+The `hosted/` directory in the public repository contains the complete Cloudflare Worker adaptation used for the hosted build, including its source, generator and simulated tests. See [hosted/README.md](hosted/README.md) for its session and rate-limit behavior.
+
 ```sh
 npm start
 ```
@@ -48,3 +50,4 @@ Automated tests simulate Qloo responses, including lock retention, cumulative ve
 - [CopilotKit](https://github.com/CopilotKit/CopilotKit), [LangGraph](https://github.com/langchain-ai/langgraph), and [assistant-ui](https://github.com/assistant-ui/assistant-ui) informed the interaction concepts: human confirmation, explicit state and visible tool receipts. No source code or packages from those projects are included, and this app does not claim to implement their frameworks.
 
 This project is independent and is not endorsed by Qloo. The MIT license applies to this project's source; Qloo data remains subject to Qloo's terms.
+

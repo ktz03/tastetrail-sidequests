@@ -1,0 +1,6 @@
+.env
+.env.*
+.vercel/
+node_modules/
+Qloo-key.txt
+*.log

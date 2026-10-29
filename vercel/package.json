@@ -1,0 +1,1 @@
+{"name":"tastetrail-sidequests-vercel","private":true,"type":"module","engines":{"node":"22.x"},"scripts":{"test":"node test-vercel.mjs"}}

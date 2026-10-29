@@ -16,7 +16,7 @@ A cultural exchange for two curious people: search and confirm one cultural seed
 
 Requires Node.js 20 or later. No packages need to be installed.
 
-The `hosted/` directory in the public repository contains the complete Cloudflare Worker adaptation used for the hosted build, including its source, generator and simulated tests. See [hosted/README.md](hosted/README.md) for its session and rate-limit behavior.
+The `hosted/` directory in the public repository contains the complete Cloudflare Worker adaptation, including its source, generator and simulated tests. See [hosted/README.md](hosted/README.md) for its session and rate-limit behavior. The [vercel/](vercel/) directory contains the Vercel adaptation and its simulated tests.
 
 ```sh
 npm start

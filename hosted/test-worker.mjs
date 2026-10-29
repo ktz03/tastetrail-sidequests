@@ -3,6 +3,11 @@ import './source/test/mock-sidequests.mjs';
 import worker from './worker/index.js';
 
 const env={QLOO_API_KEY:'test-sidequest-key'};
+for (const path of ['/','/index.html','/style.css','/app.js']) {
+  const get=await worker.fetch(new Request('https://tastetrail.example'+path),env);
+  const head=await worker.fetch(new Request('https://tastetrail.example'+path,{method:'HEAD'}),env);
+  assert.equal(head.status,get.status); assert.equal(head.headers.get('content-type'),get.headers.get('content-type')); assert.equal(await head.text(),'');
+}
 async function call(path,body,customEnv=env){ const req=new Request('https://tastetrail.example'+path,{method:'POST',headers:{'content-type':'application/json','origin':'https://tastetrail.example'},body:JSON.stringify(body)}); const res=await worker.fetch(req,customEnv); return [res.status,await res.json()]; }
 const [s1,a]=await call('/api/search',{query:'Alpha'});
 const [s2,b]=await call('/api/search',{query:'Beta'});
